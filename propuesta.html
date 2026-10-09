@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Propuesta de mejora - Seguridad y Salud en el Trabajo - Universidad Mariana Pasto">
+    <title>SST · Universidad Mariana — Propuesta de Mejora</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ======== PRELOADER ======== -->
+<div id="preloader">
+    <div class="pre-inner">
+        <div class="pre-logo">UMARIANA</div>
+        <div class="pre-bar"><div class="pre-bar-fill"></div></div>
+    </div>
+</div>
+
+<!-- ======== ALERTA FIJA ======== -->
+<div class="alert-banner">
+    <i class="fas fa-triangle-exclamation"></i>
+    Emergencias: llame al <strong>7244460 Ext. 149</strong> — Brigada disponible 24/7
+    <a href="#" onclick="showEmergModal(); return false;">Ver directorio</a>
+</div>
+
+<!-- ======== HEADER ======== -->
+<header class="site-header" id="siteHeader">
+    <div class="header-top">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <div class="d-flex gap-4 flex-wrap">
+                    <a href="mailto:seguridadysalud@umariana.edu.co">
+                        <i class="fas fa-envelope"></i>seguridadysalud@umariana.edu.co
+                    </a>
+                    <a href="tel:7244460">
+                        <i class="fas fa-phone"></i>7244460 Ext. 149
+                    </a>
+                </div>
+                <a href="https://www.umariana.edu.co" target="_blank" style="color:rgba(255,255,255,.6); font-size:.76rem;">
+                    <i class="fas fa-arrow-up-right-from-square"></i> Portal Universidad Mariana
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-2">
+        <nav class="navbar navbar-expand-lg p-0">
+            <a class="navbar-brand me-4" href="#"><span class="navbar-brand-text">SST · UMARIANA</span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sobre Nosotros</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="gestion-talento-humano.html">Gestión del Talento Humano</a></li>
+                            <li><a class="dropdown-item" href="seguridad-salud-trabajo.html">Seguridad y Salud en el Trabajo</a></li>
+                            <li><a class="dropdown-item" href="formatos/">Descarga de Formatos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://fenix.umariana.edu.co/iceberg-pe/" target="_blank">Portal del Empleado</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.umariana.edu.co/ofertas-laborales.html" target="_blank">Oferta Laboral</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Programas Gestión Humana</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://apps.umariana.edu.co/hojas_de_vida/" target="_blank">Sistema de Hojas de Vida</a></li>
+                            <li><a class="dropdown-item" href="https://apps.umariana.edu.co/viaticos/" target="_blank">Sistema de Viáticos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="d-flex gap-2 align-items-center mt-2 mt-lg-0">
+                    <a href="#reporte" class="nav-link btn-nav-report"><i class="fas fa-clipboard-list me-1"></i>Reportar Riesgo</a>
+                    <a href="#" onclick="showEmergModal(); return false;" class="nav-link btn-nav-emerg"><i class="fas fa-phone-alt me-1"></i>Emergencias</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- ======== HERO ======== -->
+<section class="hero" id="inicio">
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Texto -->
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    Sistema de Gestión SST · Universidad Mariana
+                </div>
+
+                <h1 class="hero-title">
+                    Cuidamos tu <span>bienestar</span> y tu <span class="green">seguridad</span> cada día
+                </h1>
+
+                <p class="hero-desc">
+                    Protegemos la salud física, mental y social de toda la comunidad universitaria mediante prevención, educación y ambientes de trabajo seguros.
+                </p>
+
+                <div class="hero-btns">
+                    <a href="#accesos" class="btn-hero-white">
+                        <i class="fas fa-th-large"></i> Ver Servicios
+                    </a>
+                    <a href="#reporte" class="btn-hero-ghost">
+                        <i class="fas fa-triangle-exclamation"></i> Reportar Incidente
+                    </a>
+                </div>
+
+                <div class="hero-kpi">
+                    <div class="kpi-item">
+                        <span class="kpi-num counter" data-target="800">0</span>
+                        <span class="kpi-lbl">Trabajadores</span>
+                    </div>
+                    <div class="kpi-item">
+                        <span class="kpi-num counter" data-target="42">0</span>
+                        <span class="kpi-lbl">Capacitaciones</span>
+                    </div>
+                    <div class="kpi-item">
+                        <span class="kpi-num counter" data-target="98">0</span>
+                        <span class="kpi-lbl">Días sin accidentes</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Imagen -->
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="180">
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80"
+                         alt="Equipo SST Universidad Mariana" class="hero-img-main">
+
+                    <div class="hero-float-card fc-1" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="fc-icon" style="background:var(--accent);"><i class="fas fa-shield-halved"></i></div>
+                        <div>
+                            <strong style="font-size:.8rem;display:block;color:var(--text-dark);">Ambiente Seguro</strong>
+                            <span style="font-size:.7rem;color:var(--text-gray);">Verificado 2024</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-float-card fc-2" data-aos="zoom-in" data-aos-delay="700">
+                        <div class="fc-icon" style="background:var(--danger);"><i class="fas fa-heart-pulse"></i></div>
+                        <div>
+                            <strong style="font-size:.8rem;display:block;color:var(--text-dark);">Bienestar Integral</strong>
+                            <span style="font-size:.7rem;color:var(--text-gray);">Física · Mental · Social</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ======== ACCESOS RÁPIDOS ======== -->
+<section class="quick" id="accesos">
+    <div class="container">
+        <div class="quick-title" data-aos="fade-up">
+            <h2>¿Qué necesitas hacer hoy?</h2>
+            <p>Accede rápido a los servicios y recursos del área SST</p>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="50">
+                <a href="#reporte" class="q-card">
+                    <div class="q-icon" style="background:linear-gradient(135deg,var(--danger),#922b21);">
+                        <i class="fas fa-triangle-exclamation" style="color:#fff;"></i>
+                    </div>
+                    <h5>Reportar Accidente</h5>
+                    <p>Notifica incidentes o accidentes de trabajo</p>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                <a href="#salud-mental" class="q-card">
+                    <div class="q-icon" style="background:linear-gradient(135deg,var(--accent),#1e8449);">
+                        <i class="fas fa-brain" style="color:#fff;"></i>
+                    </div>
+                    <h5>Salud Mental</h5>
+                    <p>Ruta de atención psicosocial</p>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="150">
+                <a href="#documentos" class="q-card">
+                    <div class="q-icon" style="background:linear-gradient(135deg,#e67e22,#ca6f1e);">
+                        <i class="fas fa-file-arrow-down" style="color:#fff;"></i>
+                    </div>
+                    <h5>Descargar Formatos</h5>
+                    <p>Documentos y formularios SST</p>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+                <a href="#capacitaciones" class="q-card">
+                    <div class="q-icon" style="background:linear-gradient(135deg,var(--purple),#6c3483);">
+                        <i class="fas fa-graduation-cap" style="color:#fff;"></i>
+                    </div>
+                    <h5>Capacitaciones</h5>
+                    <p>Cursos y entrenamientos SST</p>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="250">
+                <a href="#calendario" class="q-card">
+                    <div class="q-icon" style="background:linear-gradient(135deg,var(--primary-light),var(--primary));">
+                        <i class="fas fa-calendar-days" style="color:#fff;"></i>
+                    </div>
+                    <h5>Calendario SST</h5>
+                    <p>Actividades y simulacros próximos</p>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+                <a href="#" onclick="showEmergModal(); return false;" class="q-card">
+                    <div class="q-icon" style="background:linear-gradient(135deg,var(--danger),#7b241c);">
+                        <i class="fas fa-phone-volume" style="color:#fff;"></i>
+                    </div>
+                    <h5>Contactar SST</h5>
+                    <p>Líneas de atención y emergencias</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======== SOBRE NOSOTROS ======== -->
+<section id="nosotros">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6" data-aos="fade-right">
+                <span class="sec-label">Quiénes Somos</span>
+                <h2 class="sec-title">Seguridad y Salud<br>en el Trabajo</h2>
+                <p class="sec-desc mb-4">
+                    Nos encargamos de proteger y promover la salud de los trabajadores mediante la prevención de enfermedades y accidentes laborales, controlando los factores que ponen en riesgo el bienestar en el entorno laboral.
+                </p>
+
+                <div class="row g-3 mb-2">
+                    <div class="col-12">
+                        <div class="about-card">
+                            <h4><i class="fas fa-bullseye"></i>Misión</h4>
+                            <p>Garantizar ambientes laborales seguros y saludables mediante la implementación efectiva del SG-SST, en articulación con la ARL y los programas académicos de la Universidad.</p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="about-card green">
+                            <h4 style="color:var(--accent);"><i class="fas fa-eye"></i>Visión</h4>
+                            <p>Ser referente en gestión preventiva y bienestar laboral integral, promoviendo una cultura organizacional de seguridad, salud y bienestar psicosocial.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="check-list">
+                    <li><i class="fas fa-circle-check"></i>Prevención activa</li>
+                    <li><i class="fas fa-circle-check"></i>Bienestar integral</li>
+                    <li><i class="fas fa-circle-check"></i>Respaldo ARL</li>
+                    <li><i class="fas fa-circle-check"></i>Cultura de seguridad</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="about-grid">
+                    <div class="span2">
+                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=900&q=80"
+                             alt="Actividades de prevención SST">
+                    </div>
+                    <div class="half">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80"
+                             alt="Salud ocupacional">
+                    </div>
+                    <div class="half">
+                        <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?w=500&q=80"
+                             alt="Capacitación SST">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ======== ESTADÍSTICAS ======== -->
+<section class="stats-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="0">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <span class="stat-num"><span class="counter" data-target="800">0</span>+</span>
+                    <span class="stat-lbl">Trabajadores Cubiertos</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-chalkboard-user"></i></div>
+                    <span class="stat-num"><span class="counter" data-target="42">0</span></span>
+                    <span class="stat-lbl">Capacitaciones 2024</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-shield-halved"></i></div>
+                    <span class="stat-num"><span class="counter" data-target="98">0</span></span>
+                    <span class="stat-lbl">Días sin Accidentes</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-fire-extinguisher"></i></div>
+                    <span class="stat-num"><span class="counter" data-target="15">0</span></span>
+                    <span class="stat-lbl">Brigadistas Activos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======== EQUIPO ======== -->
+<section class="team-section" id="equipo">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-6 text-center" data-aos="fade-up">
+                <span class="sec-label">Nuestro Equipo</span>
+                <h2 class="sec-title">Profesionales a tu servicio</h2>
+                <p class="sec-desc mx-auto">Equipo especializado y comprometido con el bienestar laboral de toda la comunidad universitaria</p>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="team-card">
+                    <div class="team-avatar"><i class="fas fa-user"></i></div>
+                    <div class="team-body">
+                        <div class="team-role">Coordinadora SST</div>
+                        <div class="team-name">Yurany Vanessa Narvaez Muñoz</div>
+                        <div class="team-contact">
+                            <p><i class="fas fa-envelope"></i>coordinacionsst@umariana.edu.co</p>
+                            <p><i class="fas fa-phone"></i>7244460 ext. 149</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="team-card">
+                    <div class="team-avatar"><i class="fas fa-user"></i></div>
+                    <div class="team-body">
+                        <div class="team-role">Asistente SST</div>
+                        <div class="team-name">Nereyda del Carmen Lucero Vallejo</div>
+                        <div class="team-contact">
+                            <p><i class="fas fa-envelope"></i>seguridadysalud@umariana.edu.co</p>
+                            <p><i class="fas fa-phone"></i>7244460 ext. 149</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="team-card">
+                    <div class="team-avatar"><i class="fas fa-user"></i></div>
+                    <div class="team-body">
+                        <div class="team-role">Auxiliar SST</div>
+                        <div class="team-name">Paola Andrea Delgado Narvaez</div>
+                        <div class="team-contact">
+                            <p><i class="fas fa-envelope"></i>seguridadysalud@umariana.edu.co</p>
+                            <p><i class="fas fa-phone"></i>7244460 ext. 149</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======== BIENESTAR & SALUD MENTAL ======== -->
+<section class="mental" id="salud-mental">
+    <div class="container" style="position:relative;z-index:1;">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5" data-aos="fade-right">
+                <div class="mental-icon"><i class="fas fa-heart-pulse"></i></div>
+                <h2>Bienestar y Salud Mental</h2>
+                <p>Tu salud mental importa tanto como tu salud física. Contamos con rutas de atención psicosocial, primeros auxilios psicológicos y el programa <strong>Cuida-T</strong>, diseñado para acompañarte en tu bienestar integral.</p>
+                <p>Atendemos las dimensiones legal, económica, espiritual, física, mental, familiar y emocional del trabajador mariano.</p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="pdf/ruta-atencion-salud-mental-2023.pdf" target="_blank" class="btn-mental-ghost">
+                        <i class="fas fa-file-pdf"></i> Ruta de Atención
+                    </a>
+                    <a href="#reporte" class="btn-mental-white">
+                        <i class="fas fa-comments"></i> Solicitar Apoyo
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-left">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="mental-mini">
+                            <i class="fas fa-hands-holding-heart"></i>
+                            <h5>Primeros Auxilios Psicológicos</h5>
+                            <p>Atención inmediata en situaciones de crisis emocional</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mental-mini">
+                            <i class="fas fa-user-doctor"></i>
+                            <h5>Zonas de Orientación Laboral</h5>
+                            <p>Espacios de escucha y orientación confidencial</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mental-mini">
+                            <i class="fas fa-brain"></i>
+                            <h5>Prevención del Burnout</h5>
+                            <p>Programas para identificar y gestionar el agotamiento</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mental-mini">
+                            <i class="fas fa-person-running"></i>
+                            <h5>Pausas Activas</h5>
+                            <p>Rutinas de bienestar durante la jornada laboral</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mental-mini">
+                            <i class="fas fa-shield-heart"></i>
+                            <h5>Redes de Apoyo</h5>
+                            <p>Articulación con servicios especializados externos</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mental-mini">
+                            <i class="fas fa-comments"></i>
+                            <h5>Convivencia Laboral</h5>
+                            <p>Estrategias para un clima organizacional positivo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ======== DOCUMENTOS ======== -->
+<section class="docs-section" id="documentos">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-6 text-center" data-aos="fade-up">
+                <span class="sec-label">Normatividad</span>
+                <h2 class="sec-title">Documentos e Informes</h2>
+                <p class="sec-desc mx-auto">Accede a los documentos normativos y reportes del Sistema de Gestión SST</p>
+            </div>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="0">
+                <a href="pdf/politica-sst.pdf" target="_blank" class="doc-card">
+                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="doc-info"><h5>Política de SST</h5><span>Documento oficial · PDF</span></div>
+                    <i class="fas fa-chevron-right doc-arrow"></i>
+                </a>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+                <a href="pdf/objetivos-sst.pdf" target="_blank" class="doc-card">
+                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="doc-info"><h5>Objetivos de SST</h5><span>Documento oficial · PDF</span></div>
+                    <i class="fas fa-chevron-right doc-arrow"></i>
+                </a>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <a href="pdf/reglamento-higiene-sst.pdf" target="_blank" class="doc-card">
+                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="doc-info"><h5>Reglamento de Higiene y SST</h5><span>Documento oficial · PDF</span></div>
+                    <i class="fas fa-chevron-right doc-arrow"></i>
+                </a>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+                <a href="pdf/informe-sgstt2024.pdf" target="_blank" class="doc-card">
+                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="doc-info"><h5>Informe SGSST 2024</h5><span>Informe anual · PDF</span></div>
+                    <i class="fas fa-chevron-right doc-arrow"></i>
+                </a>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://www.umariana.edu.co/images2024/publicidades/reporte-accidente-trabajo-2024.pdf" target="_blank" class="doc-card">
+                    <div class="doc-icon" style="background:linear-gradient(135deg,#922b21,var(--danger));"><i class="fas fa-file-pdf"></i></div>
+                    <div class="doc-info"><h5>Reporte de Accidente de Trabajo 2024</h5><span>Formulario · PDF</span></div>
+                    <i class="fas fa-chevron-right doc-arrow"></i>
+                </a>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="250">
+                <a href="formatos/" class="doc-card">
+                    <div class="doc-icon" style="background:linear-gradient(135deg,var(--purple),#6c3483);"><i class="fas fa-folder-open"></i></div>
+                    <div class="doc-info"><h5>Centro de Descarga de Formatos</h5><span>Todos los formatos disponibles</span></div>
+                    <i class="fas fa-chevron-right doc-arrow"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======== COMITÉS ======== -->
+<section class="committees" id="comites">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-6 text-center" data-aos="fade-up">
+                <span class="sec-label">Estructura Organizativa</span>
+                <h2 class="sec-title">Comités y Grupos de Trabajo</h2>
+                <p class="sec-desc mx-auto">Organismos colegiados que velan por la seguridad y el bienestar de toda la comunidad universitaria</p>
+            </div>
+        </div>
+
+        <div class="accordion cmt-accordion" id="accComites" data-aos="fade-up">
+
+            <!-- Convivencia Laboral -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cCL">
+                        <div class="cmt-head-icon"><i class="fas fa-handshake"></i></div>
+                        <div>
+                            <strong>Comité de Convivencia Laboral</strong><br>
+                            <small style="font-weight:400;opacity:.75;">Prevención del acoso laboral · Res. 2646 / 2008</small>
+                        </div>
+                    </button>
+                </h2>
+                <div id="cCL" class="accordion-collapse collapse show" data-bs-parent="#accComites">
+                    <div class="accordion-body">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h5 style="font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:10px;">¿Qué es?</h5>
+                                <p style="font-size:.83rem;color:var(--text-gray);line-height:1.7;">Medida preventiva de acoso laboral que protege a los trabajadores contra riesgos psicosociales. Integrado por representantes del empleador y trabajadores para periodos de dos (2) años. El número de integrantes es de ocho miembros.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 style="font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:10px;">Funciones principales</h5>
+                                <ul class="fn-list">
+                                    <li><i class="fas fa-check"></i>Recibir y tramitar quejas de acoso laboral</li>
+                                    <li><i class="fas fa-check"></i>Escuchar a las partes involucradas</li>
+                                    <li><i class="fas fa-check"></i>Crear espacios de diálogo y conciliación</li>
+                                    <li><i class="fas fa-check"></i>Hacer seguimiento a compromisos adquiridos</li>
+                                    <li><i class="fas fa-check"></i>Recomendar medidas correctivas a la dirección</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row g-3 mt-3">
+                            <div class="col-md-6">
+                                <a href="pdf/res-ccl-2024.pdf" target="_blank" class="doc-card" style="padding:13px 17px;">
+                                    <div class="doc-icon" style="width:38px;height:38px;font-size:1rem;"><i class="fas fa-file-pdf"></i></div>
+                                    <div class="doc-info"><h5 style="font-size:.8rem;">Resolución de Conformación CCL</h5></div>
+                                    <i class="fas fa-download doc-arrow"></i>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="pdf/quejas-ccl.docx" target="_blank" class="doc-card" style="padding:13px 17px;">
+                                    <div class="doc-icon" style="width:38px;height:38px;font-size:1rem;background:linear-gradient(135deg,var(--primary-light),var(--primary));"><i class="fas fa-file-word"></i></div>
+                                    <div class="doc-info"><h5 style="font-size:.8rem;">Formulario de Quejas CCL</h5></div>
+                                    <i class="fas fa-download doc-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COPASST -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cCOPASST">
+                        <div class="cmt-head-icon"><i class="fas fa-hard-hat"></i></div>
+                        <div>
+                            <strong>COPASST</strong><br>
+                            <small style="font-weight:400;opacity:.75;">Comité Paritario de Seguridad y Salud en el Trabajo</small>
+                        </div>
+                    </button>
+                </h2>
+                <div id="cCOPASST" class="accordion-collapse collapse" data-bs-parent="#accComites">
+                    <div class="accordion-body">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h5 style="font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:10px;">¿Qué es el COPASST?</h5>
+                                <p style="font-size:.83rem;color:var(--text-gray);line-height:1.7;">Organismo de promoción y vigilancia de las normas de SST dentro de la institución. Representantes del empleador y trabajadores, elegidos para periodos de dos (2) años. Seis miembros en total.</p>
+                                <div class="info-tip">
+                                    <i class="fas fa-circle-info"></i>
+                                    <p>Todo trabajador con contrato laboral tiene <strong>derecho y deber</strong> de participar activamente en el COPASST.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 style="font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:10px;">Funciones clave</h5>
+                                <ul class="fn-list">
+                                    <li><i class="fas fa-check"></i>Proponer actividades de salud laboral</li>
+                                    <li><i class="fas fa-check"></i>Investigar accidentes y enfermedades profesionales</li>
+                                    <li><i class="fas fa-check"></i>Visitar periódicamente los lugares de trabajo</li>
+                                    <li><i class="fas fa-check"></i>Vigilar el cumplimiento del reglamento de higiene</li>
+                                    <li><i class="fas fa-check"></i>Acompañar auditorías al SG-SST</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row g-3 mt-3">
+                            <div class="col-md-6">
+                                <a href="pdf/res-copasst2024.pdf" target="_blank" class="doc-card" style="padding:13px 17px;">
+                                    <div class="doc-icon" style="width:38px;height:38px;font-size:1rem;"><i class="fas fa-file-pdf"></i></div>
+                                    <div class="doc-info"><h5 style="font-size:.8rem;">Resolución de Conformación COPASST</h5></div>
+                                    <i class="fas fa-download doc-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brigada -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cBrigada">
+                        <div class="cmt-head-icon red"><i class="fas fa-fire-extinguisher"></i></div>
+                        <div>
+                            <strong>Brigada de Emergencia</strong><br>
+                            <small style="font-weight:400;opacity:.75;">Respuesta ante emergencias · Plan de evacuación institucional</small>
+                        </div>
+                    </button>
+                </h2>
+                <div id="cBrigada" class="accordion-collapse collapse" data-bs-parent="#accComites">
+                    <div class="accordion-body">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h5 style="font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:10px;">¿Qué es?</h5>
+                                <p style="font-size:.83rem;color:var(--text-gray);line-height:1.7;">Grupo de trabajadores entrenados para actuar antes, durante y después de una emergencia. Conocen instalaciones, rutas y alarmas; están capacitados en extinción de incendios, rescate y primeros auxilios.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 style="font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:10px;">Perfil del brigadista</h5>
+                                <ul class="fn-list">
+                                    <li><i class="fas fa-check"></i>Ser voluntario y comprometido</li>
+                                    <li><i class="fas fa-check"></i>Representar a todas las áreas</li>
+                                    <li><i class="fas fa-check"></i>Poseer liderazgo y capacidad de respuesta</li>
+                                    <li><i class="fas fa-check"></i>Estar en adecuado estado físico y mental</li>
+                                    <li><i class="fas fa-check"></i>Conocer las instalaciones y procesos</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="warn-tip">
+                            <i class="fas fa-lightbulb"></i>
+                            <p><strong>¿Quieres ser brigadista?</strong> Comunícate con SST: <strong>seguridadysalud@umariana.edu.co</strong> · 7244460 Ext. 149</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ======== CAPACITACIONES ======== -->
+<section class="training" id="capacitaciones">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-6 text-center" data-aos="fade-up">
+                <span class="sec-label">Formación Continua</span>
+                <h2 class="sec-title">Capacitaciones SST</h2>
+                <p class="sec-desc mx-auto">Programas diseñados para fortalecer la cultura de seguridad y salud en la universidad</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                <div class="tr-card">
+                    <div class="tr-head" style="background:linear-gradient(135deg,rgba(231,76,60,.08),transparent);">
+                        <div class="tr-icon" style="background:linear-gradient(135deg,var(--danger),#922b21);">
+                            <i class="fas fa-kit-medical"></i>
+                        </div>
+                        <h5>Primeros Auxilios</h5>
+                    </div>
+                    <div class="tr-body">
+                        <p>Atención de emergencias médicas básicas en el lugar de trabajo.</p>
+                        <span class="tr-badge" style="background:#ffe8e8;color:#922b21;"><i class="fas fa-clock"></i>8 horas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="tr-card">
+                    <div class="tr-head" style="background:linear-gradient(135deg,rgba(230,126,34,.08),transparent);">
+                        <div class="tr-icon" style="background:linear-gradient(135deg,#e67e22,#ca6f1e);">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h5>Manejo de Extintores</h5>
+                    </div>
+                    <div class="tr-body">
+                        <p>Uso correcto de extintores y protocolos de evacuación ante incendios.</p>
+                        <span class="tr-badge" style="background:#fff3e0;color:#ca6f1e;"><i class="fas fa-clock"></i>4 horas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="tr-card">
+                    <div class="tr-head" style="background:linear-gradient(135deg,rgba(142,68,173,.08),transparent);">
+                        <div class="tr-icon" style="background:linear-gradient(135deg,var(--purple),#6c3483);">
+                            <i class="fas fa-chair"></i>
+                        </div>
+                        <h5>Ergonomía Laboral</h5>
+                    </div>
+                    <div class="tr-body">
+                        <p>Posturas correctas y configuración del puesto de trabajo para prevenir lesiones.</p>
+                        <span class="tr-badge" style="background:#f5eef8;color:#6c3483;"><i class="fas fa-clock"></i>6 horas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="tr-card">
+                    <div class="tr-head" style="background:linear-gradient(135deg,rgba(39,174,96,.08),transparent);">
+                        <div class="tr-icon" style="background:linear-gradient(135deg,var(--accent),#1e8449);">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h5>Riesgo Psicosocial</h5>
+                    </div>
+                    <div class="tr-body">
+                        <p>Identificación y manejo de factores de riesgo psicosocial en el trabajo.</p>
+                        <span class="tr-badge" style="background:#e9f7ef;color:#1e8449;"><i class="fas fa-clock"></i>8 horas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5" data-aos="fade-up">
+            <a href="mailto:seguridadysalud@umariana.edu.co" class="btn-submit" style="text-decoration:none;">
+                <i class="fas fa-envelope"></i> Solicitar una Capacitación
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ======== CALENDARIO ======== -->
+<section class="calendar" id="calendario">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-6 text-center" data-aos="fade-up">
+                <span class="sec-label">Próximas Actividades</span>
+                <h2 class="sec-title">Calendario SST 2025</h2>
+                <p class="sec-desc mx-auto">Jornadas de bienestar, simulacros, capacitaciones y campañas programadas</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="ev-card">
+                    <div class="ev-date"><div class="ev-day">20</div><div class="ev-month">May</div></div>
+                    <div class="ev-info">
+                        <h5>Simulacro de Evacuación</h5>
+                        <p><i class="fas fa-location-dot me-1"></i>Campus Principal &nbsp;·&nbsp; <i class="fas fa-clock me-1"></i>10:00 AM</p>
+                    </div>
+                    <span class="ev-type" style="background:#ffe8e8;color:#922b21;">Emergencias</span>
+                </div>
+                <div class="ev-card">
+                    <div class="ev-date" style="background:var(--accent);"><div class="ev-day">26</div><div class="ev-month">May</div></div>
+                    <div class="ev-info">
+                        <h5>Jornada de Vacunación</h5>
+                        <p><i class="fas fa-location-dot me-1"></i>Bloque María Inmaculada &nbsp;·&nbsp; <i class="fas fa-clock me-1"></i>8:00 AM</p>
+                    </div>
+                    <span class="ev-type" style="background:#e9f7ef;color:#1e8449;">Bienestar</span>
+                </div>
+                <div class="ev-card">
+                    <div class="ev-date" style="background:var(--purple);"><div class="ev-day">03</div><div class="ev-month">Jun</div></div>
+                    <div class="ev-info">
+                        <h5>Capacitación: Primeros Auxilios</h5>
+                        <p><i class="fas fa-location-dot me-1"></i>Aula 201 &nbsp;·&nbsp; <i class="fas fa-clock me-1"></i>2:00 PM</p>
+                    </div>
+                    <span class="ev-type" style="background:#f5eef8;color:#6c3483;">Capacitación</span>
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="ev-card">
+                    <div class="ev-date" style="background:#e67e22;"><div class="ev-day">10</div><div class="ev-month">Jun</div></div>
+                    <div class="ev-info">
+                        <h5>Semana de la Salud Mental</h5>
+                        <p><i class="fas fa-location-dot me-1"></i>Todos los bloques &nbsp;·&nbsp; <i class="fas fa-clock me-1"></i>Todo el día</p>
+                    </div>
+                    <span class="ev-type" style="background:#fff3e0;color:#ca6f1e;">Campaña</span>
+                </div>
+                <div class="ev-card">
+                    <div class="ev-date" style="background:var(--primary-light);"><div class="ev-day">18</div><div class="ev-month">Jun</div></div>
+                    <div class="ev-info">
+                        <h5>Inspección de Puestos de Trabajo</h5>
+                        <p><i class="fas fa-location-dot me-1"></i>Área Administrativa &nbsp;·&nbsp; <i class="fas fa-clock me-1"></i>9:00 AM</p>
+                    </div>
+                    <span class="ev-type" style="background:#e8f4fd;color:var(--primary);">Inspección</span>
+                </div>
+                <div class="ev-card">
+                    <div class="ev-date" style="background:var(--accent);"><div class="ev-day">25</div><div class="ev-month">Jun</div></div>
+                    <div class="ev-info">
+                        <h5>Pausas Activas Institucionales</h5>
+                        <p><i class="fas fa-location-dot me-1"></i>Todos los bloques &nbsp;·&nbsp; <i class="fas fa-clock me-1"></i>10:30 AM</p>
+                    </div>
+                    <span class="ev-type" style="background:#e9f7ef;color:#1e8449;">Bienestar</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======== FORMULARIO DE REPORTE ======== -->
+<section class="report-section" id="reporte">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-6 text-center" data-aos="fade-up">
+                <span class="sec-label">Gestión Preventiva</span>
+                <h2 class="sec-title">Reportar Condición Insegura</h2>
+                <p class="sec-desc mx-auto">Ayúdanos a mantener un entorno seguro. Tu reporte es <strong>confidencial</strong> y permite actuar antes de que ocurra un accidente.</p>
+            </div>
+        </div>
+
+        <div class="row g-5 align-items-start">
+
+            <div class="col-lg-7" data-aos="fade-right">
+                <div class="form-wrap">
+                    <!-- Formulario -->
+                    <div id="formContent">
+                        <h4 style="font-size:.96rem;font-weight:700;color:var(--primary);margin-bottom:22px;">
+                            <i class="fas fa-clipboard-list me-2"></i>Formulario de Reporte
+                        </h4>
+                        <form id="reportForm" onsubmit="handleSubmit(event)" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label>Nombre <span style="color:var(--text-gray);font-weight:400;">(opcional)</span></label>
+                                    <input type="text" class="form-control" placeholder="Tu nombre completo">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Área o Bloque</label>
+                                    <select class="form-select">
+                                        <option value="">Selecciona una opción</option>
+                                        <option>Bloque María Inmaculada</option>
+                                        <option>Bloque Administrativo</option>
+                                        <option>Biblioteca</option>
+                                        <option>Laboratorios</option>
+                                        <option>Cafetería</option>
+                                        <option>Parqueadero</option>
+                                        <option>Otro</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Tipo de Riesgo <span style="color:var(--danger);">*</span></label>
+                                    <select class="form-select" required id="tipoRiesgo">
+                                        <option value="">Selecciona el tipo</option>
+                                        <option>Riesgo físico (caídas, golpes)</option>
+                                        <option>Riesgo eléctrico</option>
+                                        <option>Riesgo locativo (infraestructura)</option>
+                                        <option>Riesgo químico</option>
+                                        <option>Riesgo ergonómico</option>
+                                        <option>Riesgo psicosocial</option>
+                                        <option>Riesgo biológico</option>
+                                        <option>Accidente ya ocurrido</option>
+                                        <option>Otro</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Prioridad</label>
+                                    <select class="form-select">
+                                        <option>Alta — Requiere atención inmediata</option>
+                                        <option>Media — Atención en los próximos días</option>
+                                        <option>Baja — Seguimiento programado</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label>Descripción de la Condición <span style="color:var(--danger);">*</span></label>
+                                    <textarea class="form-control" id="descReporte" rows="4" required
+                                        placeholder="Describe la situación, ubicación exacta y cualquier información relevante..."
+                                        style="resize:none;"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="confidential-note">
+                                        <i class="fas fa-lock"></i>
+                                        <p>Tu reporte es <strong>confidencial</strong>. La información será manejada exclusivamente por el equipo SST.</p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn-submit w-100 justify-content-center">
+                                        <i class="fas fa-paper-plane"></i> Enviar Reporte
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Pantalla de éxito -->
+                    <div id="formSuccess" class="success-screen" style="display:none;">
+                        <div class="success-check"><i class="fas fa-check"></i></div>
+                        <h4 style="font-weight:700;margin-bottom:8px;">¡Reporte Enviado!</h4>
+                        <p style="color:var(--text-gray);font-size:.87rem;margin-bottom:22px;">
+                            Gracias por contribuir a un entorno más seguro. El equipo SST revisará tu reporte y tomará las medidas necesarias a la brevedad.
+                        </p>
+                        <button onclick="resetForm()" class="btn-submit" style="background:linear-gradient(135deg,var(--accent),#1e8449);">
+                            <i class="fas fa-rotate-right"></i> Enviar Otro Reporte
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5" data-aos="fade-left">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="ri-card">
+                            <div class="ri-icon" style="background:linear-gradient(135deg,var(--danger),#922b21);">
+                                <i class="fas fa-circle-exclamation"></i>
+                            </div>
+                            <h5>¿Por qué reportar?</h5>
+                            <p>Cada reporte permite identificar y eliminar riesgos antes de que se conviertan en accidentes. Tu participación es fundamental para la seguridad de todos.</p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="ri-card">
+                            <div class="ri-icon" style="background:linear-gradient(135deg,var(--accent),#1e8449);">
+                                <i class="fas fa-phone-volume"></i>
+                            </div>
+                            <h5>Contacto Directo SST</h5>
+                            <p style="margin-bottom:10px;">Para reportes urgentes o emergencias contáctanos directamente:</p>
+                            <p style="font-weight:700;color:var(--primary);font-size:.84rem;">
+                                <i class="fas fa-phone me-2" style="color:var(--accent);"></i>7244460 Ext. 149
+                            </p>
+                            <p style="font-weight:700;color:var(--primary);font-size:.84rem;margin:0;">
+                                <i class="fas fa-envelope me-2" style="color:var(--accent);"></i>seguridadysalud@umariana.edu.co
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="ri-card">
+                            <div class="ri-icon" style="background:linear-gradient(135deg,var(--warning),#d68910);">
+                                <i class="fas fa-stopwatch"></i>
+                            </div>
+                            <h5>Tiempo de Respuesta</h5>
+                            <p style="margin:0;line-height:1.9;">
+                                <span style="color:var(--danger);font-weight:700;">Alta prioridad:</span> 24 horas<br>
+                                <span style="color:var(--warning);font-weight:700;">Media prioridad:</span> 3 días hábiles<br>
+                                <span style="color:var(--accent);font-weight:700;">Baja prioridad:</span> 7 días hábiles
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ======== TIP SST ======== -->
+<div class="tip-banner">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-center gap-4 flex-wrap text-center" data-aos="fade-up">
+            <div class="tip-icon"><i class="fas fa-lightbulb" style="color:#f1c40f;"></i></div>
+            <div class="tip-text">
+                <small>Tip SST de la semana</small>
+                <p>"Ajusta tu monitor a la altura de los ojos. Toma una pausa de 5 minutos cada hora frente al computador y realiza ejercicios de estiramiento para evitar lesiones musculoesqueléticas."</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ======== MAPA ======== -->
+<section class="map-section">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.908194580957!2d-77.28553068488748!3d1.223826999107364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed47eda893275%3A0xdd5dd37b8fe470c2!2sUniversidad%20Mariana!5e0!3m2!1ses!2sco!4v1652198902529!5m2!1ses!2sco"
+        style="border:0;width:100%;height:420px;" allowfullscreen="" loading="lazy">
+    </iframe>
+</section>
+
+<!-- ======== FOOTER ======== -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row g-5">
+
+            <div class="col-lg-4">
+                <div class="footer-brand">SST · UMARIANA</div>
+                <p class="footer-desc">Institución de educación superior, católica y privada. Forma profesionales humana y académicamente competentes, con espíritu crítico, sentido ético y compromiso social.</p>
+                <div class="social-row">
+                    <a href="https://www.facebook.com/UniversidadMariana.Pasto" class="soc-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/user/UniversidadMariana/" class="soc-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://twitter.com/UMarianaPasto" class="soc-link" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/universidadmariana/" class="soc-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <div class="footer-title">Navegación</div>
+                <ul class="footer-nav">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#equipo">Nuestro Equipo</a></li>
+                    <li><a href="#documentos">Documentos</a></li>
+                    <li><a href="#comites">Comités</a></li>
+                    <li><a href="#capacitaciones">Capacitaciones</a></li>
+                    <li><a href="#reporte">Reportar Riesgo</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-title">Links de Interés</div>
+                <ul class="footer-nav">
+                    <li><a href="https://www.umariana.edu.co" target="_blank">Portal Universidad Mariana</a></li>
+                    <li><a href="https://fenix.umariana.edu.co/iceberg-pe/" target="_blank">Portal del Empleado</a></li>
+                    <li><a href="https://apps.umariana.edu.co/hojas_de_vida/" target="_blank">Sistema de Hojas de Vida</a></li>
+                    <li><a href="https://www.umariana.edu.co/ofertas-laborales.html" target="_blank">Oferta Laboral</a></li>
+                    <li><a href="https://www.longevo.com/" target="_blank">Longevo · Salud Laboral</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="footer-title">Contacto SST</div>
+                <div class="foot-contact">
+                    <div class="foot-contact-row">
+                        <i class="fas fa-location-dot"></i>
+                        <span>Bloque María Inmaculada, Salón 100<br>Universidad Mariana, Pasto</span>
+                    </div>
+                    <div class="foot-contact-row">
+                        <i class="fas fa-phone"></i>
+                        <span>7244460 Ext. 149</span>
+                    </div>
+                    <div class="foot-contact-row">
+                        <i class="fas fa-envelope"></i>
+                        <span>seguridadysalud@umariana.edu.co</span>
+                    </div>
+                    <div class="foot-contact-row">
+                        <i class="fas fa-clock"></i>
+                        <span>Lunes a Viernes · 8:00 AM – 5:00 PM</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>Copyright © <span>Universidad Mariana</span> · Seguridad y Salud en el Trabajo · Todos los derechos reservados</p>
+    </div>
+</footer>
+
+<!-- ======== BOTONES FLOTANTES ======== -->
+<div class="fab-group">
+    <a href="#" onclick="showEmergModal(); return false;" class="fab fab-red">
+        <i class="fas fa-phone-alt"></i><span>Emergencias</span>
+    </a>
+    <a href="mailto:seguridadysalud@umariana.edu.co" class="fab fab-mail">
+        <i class="fas fa-envelope"></i><span>Escribir SST</span>
+    </a>
+    <a href="#" onclick="scrollTop(); return false;" class="fab fab-top" id="fabTop" style="display:none;">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+<!-- ======== MODAL DIRECTORIO EMERGENCIAS ======== -->
+<div class="modal fade emerg-modal" id="emergModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="border:none;border-radius:16px;overflow:hidden;">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fas fa-phone-volume me-2"></i>Directorio de Emergencias</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="emerg-row">
+                    <div class="ei" style="background:linear-gradient(135deg,var(--danger),#922b21);"><i class="fas fa-heart-pulse"></i></div>
+                    <div>
+                        <h6>Coordinación SST</h6>
+                        <p>7244460 Ext. 149 · coordinacionsst@umariana.edu.co</p>
+                    </div>
+                </div>
+                <div class="emerg-row">
+                    <div class="ei" style="background:linear-gradient(135deg,#e67e22,#ca6f1e);"><i class="fas fa-fire-extinguisher"></i></div>
+                    <div>
+                        <h6>Brigada de Emergencias</h6>
+                        <p>Contactar a través de Coordinación SST · Ext. 149</p>
+                    </div>
+                </div>
+                <div class="emerg-row">
+                    <div class="ei" style="background:linear-gradient(135deg,var(--danger),#922b21);"><i class="fas fa-truck-medical"></i></div>
+                    <div>
+                        <h6>Líneas de Emergencia Nacional</h6>
+                        <p>123 · Cruz Roja: 132 · Bomberos: 119</p>
+                    </div>
+                </div>
+                <div class="emerg-row">
+                    <div class="ei" style="background:linear-gradient(135deg,var(--accent),#1e8449);"><i class="fas fa-brain"></i></div>
+                    <div>
+                        <h6>Apoyo Psicosocial</h6>
+                        <p>seguridadysalud@umariana.edu.co · Ext. 149</p>
+                    </div>
+                </div>
+                <div class="emerg-row" style="margin-bottom:0;">
+                    <div class="ei" style="background:linear-gradient(135deg,var(--primary-light),var(--primary));"><i class="fas fa-shield-halved"></i></div>
+                    <div>
+                        <h6>Seguridad Campus</h6>
+                        <p>Portería principal · Universidad Mariana</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="border:none;padding:14px 22px;gap:10px;">
+                <a href="tel:7244460" class="btn-submit" style="text-decoration:none;font-size:.83rem;padding:10px 18px;">
+                    <i class="fas fa-phone"></i> Llamar Ahora
+                </a>
+                <button class="btn btn-sm" data-bs-dismiss="modal" style="color:var(--text-gray);">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
